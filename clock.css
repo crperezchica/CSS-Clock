@@ -1,7 +1,9 @@
 .clock {
   border-radius: 50%;
-  background: #ffff url("https://cssanimation.rocks/images/posts/clocks/ios_clock.svg") no-repeat center;
-  background-size: 50%;
+  background: #ffff url("https://cssanimation.rocks/images/posts/clocks/ios_clock.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
   height: 20 em;
   padding-bottom: 31%;
   position: relative;
@@ -63,8 +65,8 @@
   animation: rotate 43200s infinite linear;
 }
 .minutes-container {
-  animation: rotate 3600s infinite linear(60);
+  transition: transform 0.3s cubic-bezier(.4,2.08,.44);
 }
 .seconds-container {
-  animation: rotate 60s infinite linear(60);
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
 }
